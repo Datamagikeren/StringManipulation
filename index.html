@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- https://www.bootstrapcdn.com/ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js"></script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" type="text/css" href="/css.css">
+    <title>StringManipulation</title>
+</head>
+
+<body>
+    <div id="app" class="divcenter">
+        <input id="inputField" v-model="word" placeholder="Type a word" class="mx-1">
+        
+        <button id="button" class="btn btn-secondary mx-1" v-on:click="stringManipulate">Show it</button>
+        <table class="table table-striped" v-if="words.length > 1">
+            <tbody>
+                <tr v-for="prop in words">
+                    <td>{{prop}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <p v-else> {{message}} </p>
+    </div>
+    <script src="js.js"></script>
+</body>
+
+</html>
